@@ -1,0 +1,21 @@
+    private fun buttonNegPosClick() {
+        oldnum = Numbers.toString().toDouble()
+        val swap: Double
+        when (type){
+            numsign.NEGATIVE -> swap = oldnum * -1.0
+            numsign.POSITIVE -> swap = oldnum * -1.0
+            else -> swap = 0.0
+        }
+    }
+
+    private fun typeclick(btn: Button){
+        if(btn.text == "+/-"){
+            type = numsign.NEGATIVE
+        }
+        else{
+            type = numsign.POSITIVE
+        }
+        sign = true
+    }
+
+enum class numsign {NEGATIVE, POSITIVE, NONE}
